@@ -26,7 +26,7 @@ app.use(cors());
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.send("Up and Runnnnnning");
+  res.send("Up and Running");
 });
 
 app.post("/signin", signin.signinAuthentication(db, bcrypt));
