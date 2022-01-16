@@ -3,7 +3,7 @@ const jwt = require("jsonwebtoken");
 // Redis Setup
 const redis = require("redis");
 // Update your host to the proper address in production
-const redisClient = redis.createClient({ host: "127.0.0.1" });
+const redisClient = redis.createClient({ url: process.env.REDIS_URL });
 
 const signToken = (username) => {
   const jwtPayload = { username };
